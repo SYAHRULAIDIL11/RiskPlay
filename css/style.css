@@ -1,0 +1,300 @@
+/* =========================
+   RESET DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background-color: #111827;
+    color: white;
+    padding: 30px 0;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #d1d5db;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    padding: 35px 0 20px;
+}
+
+.intro h2 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   WARNING
+========================= */
+
+.warning {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff7ed;
+    border-left: 5px solid #f97316;
+    border-radius: 6px;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+.dashboard .card {
+    margin-bottom: 0;
+}
+
+.card span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.card h2 {
+    margin-top: 8px;
+}
+
+
+/* =========================
+   SIMULATION
+========================= */
+
+.simulation {
+    margin-bottom: 25px;
+}
+
+.simulation h2 {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-top: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 15px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+
+/* =========================
+   HASIL SIMULASI
+========================= */
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-radius: 6px;
+}
+
+
+/* =========================
+   RISK
+========================= */
+
+.risk-section {
+    margin-bottom: 25px;
+}
+
+.risk-result {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-left: 5px solid #2563eb;
+    border-radius: 6px;
+}
+
+.risk-result h2 {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education {
+    margin-bottom: 40px;
+}
+
+.education p {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 25px;
+}
+
+.footer p {
+    margin: 3px 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+}
+/* =========================
+   STATISTIK SIMULASI
+========================= */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.statistics .card {
+    margin-bottom: 0;
+}
+
+.statistics .card h2 {
+    margin-top: 8px;
+}

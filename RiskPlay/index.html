@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RiskPlay - Simulasi Edukatif</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1>RiskPlay</h1>
+
+            <p>
+                Simulasi Edukatif Risiko Perjudian Online
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         KONTEN UTAMA
+    =============================== -->
+
+    <main class="container">
+
+
+        <!-- ==============================
+             INFORMASI
+        =============================== -->
+
+        <section class="intro">
+
+            <h2>
+                Simulasi Finansial
+            </h2>
+
+            <p>
+                Gunakan saldo virtual untuk melihat bagaimana aktivitas
+                yang dilakukan secara berulang dapat memengaruhi kondisi
+                saldo dalam simulasi.
+            </p>
+
+            <div class="warning">
+
+                <strong>
+                    Catatan:
+                </strong>
+
+                Sistem ini hanya menggunakan uang virtual dan tidak
+                melibatkan transaksi uang asli.
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             DASHBOARD
+        =============================== -->
+
+        <section class="dashboard">
+
+
+            <!-- Saldo -->
+
+            <div class="card">
+
+                <span>
+                    Saldo Virtual
+                </span>
+
+                <h2 id="saldo">
+                    Rp1.000.000
+                </h2>
+
+            </div>
+
+
+            <!-- Total Aktivitas -->
+
+            <div class="card">
+
+                <span>
+                    Total Aktivitas
+                </span>
+
+                <h2 id="totalAktivitas">
+                    0
+                </h2>
+
+            </div>
+
+
+            <!-- Total Nominal -->
+
+            <div class="card">
+
+                <span>
+                    Total Nominal
+                </span>
+
+                <h2 id="totalNominal">
+                    Rp0
+                </h2>
+
+            </div>
+
+
+            <!-- Status -->
+
+            <div class="card">
+
+                <span>
+                    Status Simulasi
+                </span>
+
+                <h2 id="status">
+                    Belum Dimulai
+                </h2>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==============================
+             STATISTIK SIMULASI
+        =============================== -->
+
+        <section class="statistics">
+
+
+            <!-- Total Menang -->
+
+            <div class="card">
+
+                <span>
+                    Total Menang
+                </span>
+
+                <h2 id="totalMenang">
+                    0
+                </h2>
+
+            </div>
+
+
+            <!-- Total Kalah -->
+
+            <div class="card">
+
+                <span>
+                    Total Kalah
+                </span>
+
+                <h2 id="totalKalah">
+                    0
+                </h2>
+
+            </div>
+
+
+            <!-- Rasio Kekalahan -->
+
+            <div class="card">
+
+                <span>
+                    Rasio Kekalahan
+                </span>
+
+                <h2 id="rasioKalah">
+                    0%
+                </h2>
+
+            </div>
+
+
+            <!-- Perubahan Saldo -->
+
+            <div class="card">
+
+                <span>
+                    Perubahan Saldo
+                </span>
+
+                <h2 id="perubahanSaldo">
+                    Rp0
+                </h2>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==============================
+             GRAFIK PERKEMBANGAN SALDO
+        =============================== -->
+
+        <section class="chart-section card">
+
+            <h2>
+                Grafik Perkembangan Saldo
+            </h2>
+
+            <p>
+                Grafik menunjukkan perubahan saldo virtual
+                berdasarkan aktivitas simulasi yang dilakukan.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="saldoChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             AREA SIMULASI
+        =============================== -->
+
+        <section class="simulation card">
+
+
+            <h2>
+                Mulai Simulasi
+            </h2>
+
+
+            <p>
+                Pilih nominal virtual untuk menjalankan aktivitas
+                simulasi.
+            </p>
+
+
+            <!-- Pilihan Nominal -->
+
+            <div class="form-group">
+
+                <label for="nominal">
+                    Nominal Aktivitas
+                </label>
+
+
+                <select id="nominal">
+
+                    <option value="5000">
+                        Rp5.000
+                    </option>
+
+                    <option value="10000">
+                        Rp10.000
+                    </option>
+
+                    <option value="25000">
+                        Rp25.000
+                    </option>
+
+                    <option value="50000">
+                        Rp50.000
+                    </option>
+
+                    <option value="100000">
+                        Rp100.000
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ==============================
+                 TOMBOL JUMLAH AKTIVITAS
+            =============================== -->
+
+           <!-- Tombol Simulasi -->
+
+<div class="button-group">
+
+    <button id="btnSimulasi" class="btn-primary">
+        1X
+    </button>
+
+    <button id="btnSimulasi2" class="btn-primary">
+        2X
+    </button>
+
+    <button id="btnSimulasi5" class="btn-primary">
+        5X
+    </button>
+
+    <button id="btnSimulasi10" class="btn-primary">
+        10X
+    </button>
+
+    <button id="btnSimulasi50" class="btn-primary">
+        50X
+    </button>
+
+    <button id="btnSimulasi100" class="btn-primary">
+        100X
+    </button>
+
+    <button id="btnReset" class="btn-secondary">
+        Reset
+    </button>
+
+</div>
+
+
+            <!-- Hasil -->
+
+            <div
+                id="hasilSimulasi"
+                class="result">
+
+                Belum ada aktivitas simulasi.
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==============================
+             ANALISIS RISIKO
+        =============================== -->
+
+        <section class="risk-section card">
+
+
+            <h2>
+                Analisis Risiko
+            </h2>
+
+
+            <div class="risk-result">
+
+
+                <span>
+                    Tingkat Risiko
+                </span>
+
+
+                <h2 id="tingkatRisiko">
+
+                    Belum Dianalisis
+
+                </h2>
+
+
+                <p id="keteranganRisiko">
+
+                    Jalankan simulasi terlebih dahulu
+                    untuk melihat hasil analisis.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==============================
+             INFORMASI EDUKATIF
+        =============================== -->
+
+        <section class="education card">
+
+
+            <h2>
+                Informasi Edukatif
+            </h2>
+
+
+            <p>
+
+                Simulasi ini bertujuan membantu pengguna memahami
+                hubungan antara frekuensi aktivitas, nominal,
+                hasil aktivitas, dan perubahan saldo virtual.
+
+            </p>
+
+
+            <p>
+
+                Jumlah nominal yang berputar dalam suatu aktivitas
+                tidak sama dengan jumlah keuntungan yang diperoleh.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="footer">
+
+        <p>
+            RiskPlay &copy; 2026
+        </p>
+
+        <p>
+            Prototype Penelitian Skripsi
+        </p>
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript Project -->
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
